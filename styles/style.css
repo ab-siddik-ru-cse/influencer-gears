@@ -35,6 +35,11 @@ nav ul {
     list-style: none;
 }
 
+.logo .fa-bars,
+.logo .fa-cart-shopping {
+    display: none;
+}
+
 nav ul li a {
     text-decoration: none;
     color: var(--color-gray-700);
@@ -61,6 +66,7 @@ nav h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     gap: 133px;
     margin-top: 130px;
 }
@@ -115,7 +121,44 @@ nav h1 {
     margin-bottom: 100px;
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        margin: 35px 16px 0px;
+    }
+
+    nav ul li {
+        display: none;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .logo .fa-bars,
+    .logo .fa-cart-shopping {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        gap: 0px;
+        margin-top: 20px;
+    }
+
+    .hero-image {
+        margin-bottom: 20px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+}
 
 .logo-container {
     max-width: 1110px;
@@ -128,8 +171,20 @@ nav h1 {
 
 .logo-image {
     display: flex;
+    flex-wrap: wrap;
     gap: 61px;
     padding: 44px 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .logo-container {
+        border: none;
+    }
+
+    .logo-image {
+        justify-content: center;
+    }
+
 }
 
 .collection-container {
@@ -145,12 +200,14 @@ nav h1 {
     margin-bottom: 40px;
     text-align: center;
 }
+
 .collection {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px; 
+    gap: 30px;
 }
+
 .collection-card {
     width: 330px;
     height: 475px;
@@ -181,12 +238,15 @@ nav h1 {
     margin-bottom: 10px;
     color: var(--color-gray-50);
 }
+
 .collection-card .rating i {
     color: #FB8200;
 }
+
 .rating {
     font-size: 18px;
 }
+
 .collection-container .btn {
     display: block;
     margin: 40px auto 0 auto;
@@ -195,8 +255,95 @@ nav h1 {
     margin-bottom: 100px;
     border-radius: 2px;
 }
+
 .collection-container .btn:hover {
     background-color: var(--color-pink);
     color: var(--color-white);
     transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    .collection {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.feature-container {
+    max-width: 1110px;
+    margin: 0 auto;
+}
+
+.feature-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.right-text h1 {
+    font-size: 38px;
+    font-weight: bold;
+    color: #0A0826;
+    margin-bottom: 24px;
+}
+
+.right-text p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 12px;
+    color: var(--color-gray-50);
+}
+
+.right-text {
+    max-width: 500px;
+}
+
+.right-text .btn {
+    border-radius: 0px;
+}
+
+@media screen and (max-width: 768px) {
+    .feature-content {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+.footer-container {
+    max-width: 1440px;
+    padding: 50px 0px;
+    background-color: var(--color-pink);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-content h4 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 12px;
+}
+
+.footer-content p {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-white);
+    margin-bottom: 12px;
+}
+
+.social i {
+    color: var(--color-white);
+    font-size: 24px;
+    margin: 10px 10px;
+    cursor: pointer;
+}
+
+.social i:hover {
+    color: var(--color-gray-900);
 }
